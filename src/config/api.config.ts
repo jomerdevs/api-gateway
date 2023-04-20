@@ -1,4 +1,5 @@
 
 export const config = {
-    PORT: process.env.API_PORT
+    PORT: process.env.API_PORT,
+    
 }
