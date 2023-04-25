@@ -11,7 +11,7 @@ async function bootstrap() {
   app.useGlobalInterceptors( new TimeOutinterceptor());
   
   await app.listen(config.PORT, () => {
-    console.log(`🚀 Server running on port: ${config.PORT} 🚀`);
+    console.log(`🚀 Server running on port => ${config.PORT} 🚀`);
     //console.log(`📑 Swagger API docs: ${config.SWAGGER_FULL_ROUTE} 📑`);
   });
 }
