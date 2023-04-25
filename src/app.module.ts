@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { UserModule } from './user/user.module';
 import { PassengerModule } from './passenger/passenger.module';
+import { FlightModule } from './flight/flight.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { PassengerModule } from './passenger/passenger.module';
     }),
     UserModule,
     PassengerModule,
+    FlightModule,
   ],
   controllers: [AppController],
   providers: [AppService],

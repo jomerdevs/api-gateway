@@ -4,7 +4,8 @@ import { IPassenger } from 'src/common/interfaces/passenger.interface';
 import { ClientProxyCrazyFlights } from 'src/common/proxy/client-proxy';
 import { PassengerDTO } from './DTO/passenger.dto';
 import { PassengerMSG } from 'src/common/constants';
-
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('passengers')
 @Controller('api/v2/passenger')
 export class PassengerController {
 
