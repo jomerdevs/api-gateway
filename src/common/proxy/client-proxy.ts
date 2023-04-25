@@ -8,13 +8,24 @@ export class ClientProxyCrazyFlights{
     constructor(private readonly config: ConfigService){}
 
     // configurando RabbitMQ
+    
     clientProxyUsers(): ClientProxy{
         return ClientProxyFactory.create({
             transport: Transport.RMQ,
             options: {
                 urls: this.config.get('AMQP_URL'),
                 queue: RabbitMQ.UserQueue,
+            },
+        });
+    }
+
+    clientProxyPassengers(): ClientProxy {
+        return ClientProxyFactory.create({
+            transport: Transport.RMQ,
+            options: {
+                urls: this.config.get('AMQP_URL'),
+                queue: RabbitMQ.PassengerQueue,
             }
-        })
+        });
     }
 }
